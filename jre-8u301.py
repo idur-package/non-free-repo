@@ -21,8 +21,7 @@ cd /tmp/idur-jre-tmp/
 idur-pkg download https://github.com/idur-package/non-free-repo/releases/download/binaries/jre-8u301-linux-x64.tar.gz
 tar -xvzf jre-8u301-linux-x64.tar.gz
 cp -r jre1.8.0_301/ /opt/
-idur-pkg download https://github.com/idur-package/non-free-repo/releases/download/binaries/jre-8u301
-cp jre-8u301 /usr/bin/jre-8u301
+idur-pkg read https://raw.githubusercontent.com/idur-package/media/ee981e2bd8eff8df6f07f85b01e7d70f08d7cf07/jre-8u301/jre-8u301 > /usr/bin/jre-8u301
 chmod a+x /usr/bin/jre-8u301
 idur-pkg rm-tmp
 
