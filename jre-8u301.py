@@ -1,7 +1,7 @@
 
 Name="jre-8u301"
 Version="1"
-
+License="https://java.com/otnlicense"
 
 Maintainer="Can202"
 Contact="mgoopazo@hotmail.com"
@@ -22,20 +22,30 @@ idur-pkg download https://github.com/idur-package/non-free-repo/releases/downloa
 tar -xvzf jre-8u301-linux-x64.tar.gz
 cp -r jre1.8.0_301/ /opt/
 echo "#!/usr/bin/bash
-if [ ! -z $1]
+if [ ! -z $1 ]
 then
 	cd /opt/jre1.8.0_301/
-	if [ $1 = "-l" ]
+	if [ $1 = '-l' ]
 	then
 		ls bin/
+	elif [ $1 = '-r' ]
+	then
+		if [ ! -z $2 ]
+		then
+			./bin/java -jar $2
+		else
+			echo 'jre-8u301 -r <.jar>'
+		fi
 	else
-		./$1
+		./bin/$1
 	fi 
 else
-	echo Use:
-	echo jre-8u301 \"command\"
-	echo or:
-	echo jre-8u301 -l
+	echo 'jre-8u301
+Use:
+	jre-8u301 command
+Other:
+	jre-8u301 -l            list commands
+	jre-8u301 -r <.jar>     run .jar'
 fi" > /usr/bin/jre-8u301
 chmod a+x /usr/bin/jre-8u301
 
