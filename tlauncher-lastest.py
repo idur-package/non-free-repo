@@ -10,6 +10,12 @@ idurDepends=["jre-8u301", "idur-pkg"]
 Conflict=["tlauncher-lastest"]
 Description="""
 Famous Minecraft Launcher
+
+reinstall the package if you want update it
+sudo idur reinstall tlauncher-lastest
+
+minecraft launcher
+
 """
 
 Install64="""
