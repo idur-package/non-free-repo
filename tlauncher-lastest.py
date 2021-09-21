@@ -4,7 +4,7 @@ Version="1"
 Maintainer="Can202"
 Contact="mgoopazo@hotmail.com"
 
-Arch="x86_64"
+Arch="all"
 
 idurDepends=["jre-8u301", "idur-pkg"]
 Conflict=["tlauncher-lastest"]
@@ -18,7 +18,7 @@ minecraft launcher
 
 """
 
-Install64="""
+Install="""
 idur-pkg tmp tl-l
 cd /tmp/$(idur-pkg dir-tmp tl-l)
 
