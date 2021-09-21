@@ -20,7 +20,7 @@ minecraft launcher
 
 Install="""
 idur-pkg tmp tl-l
-cd /tmp/$(idur-pkg dir-tmp tl-l)
+cd $(idur-pkg dp tl-l)
 
 idur-pkg download https://tlauncher.org/jar
 mv jar jar.zip
